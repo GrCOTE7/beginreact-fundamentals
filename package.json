@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "beginjavascript": "echo 'hello beginjavascript, je suis un script bash !'"
+    "hot": "nodemon src/script00.js",
+    "start": "node src/script00.js",
+    "beginjavascript": "echo hello beginjavascript, je suis un script bash !"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",

@@ -26,12 +26,20 @@
     const triangleAir = (base, height) => (base * height) / 2;
 
     const calculate = () => {
-      const base = Number(document.querySelector('#base').value);
-      const height = Number(document.querySelector('#height').value);
+      let base =document.querySelector('#base').value;
+      let height = document.querySelector('#height').value;
+      
+      if (base === '' || height === '') {
+        alert('Les champs ne doivent pas être vides');
+        return;
+      }
+      
+      base = Number(base);
+      height = Number(height);
       
       console.log({ base, height });
       
-      if (Number.isNaN(base) || Number.isNaN(height)) {
+      if (!base || !height || Number.isNaN(base) || Number.isNaN(height)) {
         alert('The data filled is incorrect');
         return;
       }
