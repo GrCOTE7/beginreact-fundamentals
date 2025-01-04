@@ -1,15 +1,21 @@
 <!doctype html>
 <html lang="en">
-  {{> header}}
-  <body class="">
-    <div class="container flex flex-col gap-4">
-      <h1 class="text-xl font-bold text-center">Module 1 - Fundamentals</h1>
-      <p>
-        Les liens suivantes te permettent de naviguer dans les exercices qu'on
+    {{> header}}
+    <body class="">
+        <div class="container flex flex-col gap-4">
+            <h1 class="text-xl font-bold text-center">Module 1 - Fundamentals</h1>
+            <p>
+                Les liens suivantes te permettent de naviguer dans les exercices qu'on
         va faire ensemble.
-      </p>
-      <p>Problème ? Rejoins le discord.</p>
-      {{> exercices }}
-    </div>
-  </body>
+            </p>
+            <p>Problème ? Rejoins le discord.</p>
+            {{> exercices }}
+            <hr>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
+                <div class="flex flex-col gap-2 text-center text-primary">
+                    <a class="btn btn-primary btn-sm" href="/src/js00.html">JS</a>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
