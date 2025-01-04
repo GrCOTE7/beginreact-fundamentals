@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "beginjavascript": "echo 'hello beginjavascript, je suis un script bash !'"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
@@ -19,6 +20,7 @@
     "vite": "^5.3.3"
   },
   "dependencies": {
-    "vite-plugin-handlebars": "^2.0.0"
+    "vite-plugin-handlebars": "^2.0.0",
+    "nodemon": "^2.0.22"
   }
 }
