@@ -1,5 +1,19 @@
 # Module 1 - Les fundamentals
 
+Mon cours JS:
+
+- Bases : https://codelynx.dev/posts/javascript-known-to-start-react
+
+- Cours : https://codeline.app/cdly
+
+[Dépôt GH](https://github.com/Melvynx/beginjavascript-module2-base)
+
+//2do Lire: https://codelynx.dev/posts/comment-utiliser-useref
+
+// Autre resource JS: https://fr.javascript.info/
+
+---
+
 Pour appréhender correctement React, je vais te faire découvrir les fondamentaux de React.
 Il faut bien comprendre quel problème React résout. Dans ce module, on va faire du React
 sans React.
