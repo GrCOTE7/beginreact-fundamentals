@@ -31,3 +31,17 @@ export function prompt(question) {
     });
   }
 }
+
+export function round(value, decimals = 2) {
+  const multiplier = 10 ** decimals;
+  return Math.round(value * multiplier) / multiplier;
+}
+
+export function stopIfIsNotNumber(number) {
+  const parsedNumber = Number(number);
+  if (isNaN(parsedNumber)) {
+    log('Error :', number, "isn't a number");
+    process.exit(1);
+  }
+  return parsedNumber;
+}

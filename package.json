@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "hot": "nodemon src/script00.js",
     "start": "node src/script00.js",
-    "beginjavascript": "echo hello beginjavascript, je suis un script bash !"
+    "beginjavascript": "echo hello beginjavascript, je suis un script bash !",
+    "test": "vitest"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
@@ -23,7 +24,9 @@
   },
   "dependencies": {
     "nodemon": "^2.0.22",
+    "prompt-sync": "^4.2.0",
     "tslint": "^6.1.3",
-    "vite-plugin-handlebars": "^2.0.0"
+    "vite-plugin-handlebars": "^2.0.0",
+    "vitest": "^2.1.8"
   }
 }
