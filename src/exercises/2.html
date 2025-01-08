@@ -1,25 +1,102 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    {{> head}}
+    <head>
+        {{> head}}
+        <!-- ℹ️ Les scripts React pour qu'on puisse utiliser React.createElement -->
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        {{> header-bar }}
+        <div id="root" class="container"></div>
+    </body>
+    <script>
+      
+      const container = document.querySelector('#root');
+      const root = ReactDOM.createRoot(container);
+      
+      const fruits = ['pomme', 'poire', 'fraise', 'cerise'];
+      
+      const fruitsList = React.createElement('div', null, 
+        React.createElement('ul', {className: 'list-disc list-inside'},
+          fruits.map((fruit) => {
+            return React.createElement(`li`, { key: fruit }, fruit);
+          })
+        )
+      );
+      
+      const helloBtn = React.createElement('button',
+      { 
+        id: 'test',
+        className: 'btn btn-outline mb-3', 
+        onClick: () => {
+          console.log('Tu as cliqué sur le bouton helloBtn !')
+        }
+      },
+      'Hello👋');
 
-    <!-- ℹ️ Les scripts React pour qu'on puisse utiliser React.createElement -->
-    <script
-      crossorigin
-      src="https://unpkg.com/react@18/umd/react.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-    ></script>
-  </head>
-  <body>
-    {{> header-bar }}
+      const Card = ()=> {
+        return React.createElement('div', {
+          className: 'card w-96 shadow-xl bg-gray-700',
+        },
+        React.createElement(
+          'figure',
+          null,
+          React.createElement( 'img',
+            {
+            src: 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp',
+            alt: 'Shoes'
+            }
+          )
+        ),
+          React.createElement(
+            'div',
+            { className: 'card-body' },
+            React.createElement(
+              'h2',
+              {
+                className: 'card-title'
+              },
+              'Shoes!'
+            ),
+            React.createElement(
+              'p',
+              null,
+              'If a dog chews shoes whose shoes does he choose?'
+            ),
+            React.createElement(
+              'div',
+              { className: 'card-actions justify-end' },
+              React.createElement(
+                'button',
+                { className: 'btn btn-primary' },
+                'Buy Now'
+              )
+            )
+        ),
+      )};
+      const main = React.createElement('div', null, helloBtn, React.createElement(Card), fruitsList);
+      
+      root.render(main);
+      
+      
+      
+      /*
+      const helloButton = React.createElement(
+        'button',
+        {
+          className: 'btn btn-primary',
+          onClick: () => {
+            console.log('Tu as cliqué sur Start !');
+          },
+        },
+        'Start'
+      );
+      const main = React.createElement('div', null, helloButton);
+      root.render(main);
+      */
 
-    <div id="root" class="container"></div>
-  </body>
-
-  <script>
+      
     // 🦁 Crée un button avec le text "Hello 👋"
     // 🦁 Ajoute une événement "onClick" à notre button qui affiche une alert.
 
@@ -27,8 +104,8 @@
     // 💡 On utilise un div `main` car la méthode `render` accepte qu'un seul élément
     // 💡 On va donc utiliser cette div pour render tous nos éléments
 
-    const container = document.querySelector('#root');
-    const root = undefined; // 🦁 Remplace `undefined` by `ReactDOM.createRoot(container);`
+    // const container = document.querySelector('#root'); 
+    // const root = undefined; // 🦁 Remplace `undefined` by `ReactDOM.createRoot(container);` 
     // 🦁 Utilise `root.render` pour afficher la div "main"
-  </script>
+    </script>
 </html>

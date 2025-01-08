@@ -1,15 +1,13 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    {{> head}}
-  </head>
-  <body>
-    {{> header-bar }}
-
-    <div id="root" class="container"></div>
-  </body>
-
-  <script>
+    <head>
+        {{> head}}
+    </head>
+    <body>
+        {{> header-bar }}
+        <div id="root" class="container"></div>
+    </body>
+    <script>
     const button = document.createElement('button');
     button.innerText = 'Hello 👋';
     button.classList.add('btn', 'btn-primary');
@@ -48,5 +46,5 @@
     root.appendChild(Counter('Test string'));
     root.appendChild(Counter(100));
     root.appendChild(fruitsListUl);
-  </script>
+    </script>
 </html>

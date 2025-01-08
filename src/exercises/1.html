@@ -1,19 +1,59 @@
 <!doctype html>
 <html lang="en">
-  {{> head}}
-  <body>
-    {{> header-bar }}
-  </body>
+    {{> head}}
+    <body>
+        {{> header-bar }}
+        <!-- 🦁 crée un div avec l'id "root" et la classe "container" -->
+        <div id="root" class="container"></div>
+    </body>
+    <script>
+    const root= document.querySelector('#root');
 
-  <script>
-    // 🦁 crée un div avec l'id "root" et la classe "container"
-    
     // 🦁 crée un button
+    const button = document.createElement('button');
+
+    // 🦁 ajoute le text "Hello 👋" dedans
+    button.innerText = 'Hello 👋';
     
     // 🦁 ajoute les classes "btn" et "btn-primary" dedans
-    
-    // 🦁 ajoute le text "Hello 👋" dedans
+    button.classList.add('btn', 'btn-primary');
     
     // 🦁 ajoute le button dans l'élément "root"
-  </script>
+    
+    button.addEventListener('click', () => {
+        console.log('Tu as cliqué sur Hello 👋!');
+    })
+
+    const Counter = (initialValue) => {
+        const button = document.createElement('button');
+        button.classList.add('btn', 'btn-outline');
+        button.innerText = Number(initialValue) || 0;
+        root.appendChild(button);
+        
+        const onClick = () => {
+            const previousValue = Number(button.innerText);
+            button.innerText = previousValue + 1;
+        };
+        button.addEventListener('click', onClick);
+        return button;
+    };
+    
+    const fruits = ['banana', 'apple', 'strawberry', 'test'];
+
+    const fruitsListUL = document.createElement('ul');
+    fruitsListUL.classList.add('list-disc', 'list-inside');
+
+    for (const fruit of fruits) {
+        const fruitLi=document.createElement('li');
+        fruitLi.innerText = fruit;
+        fruitsListUL.appendChild(fruitLi);
+    }
+
+    root.appendChild(button);
+    Counter(0);
+    Counter('ok');
+    Counter(100);
+
+    root.appendChild(fruitsListUL);
+    </script>
 </html>
