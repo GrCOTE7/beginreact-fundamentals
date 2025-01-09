@@ -1,45 +1,68 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    {{> head}}
-
-    <script
-      crossorigin
-      src="https://unpkg.com/react@18/umd/react.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-    ></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
-
-  <body>
-    {{> header-bar }}
-
-    <div id="root" class="container"></div>
-  </body>
-
-  <!-- 💡 permet de faire comprendre a Babel qu'il doit compiler ce fichier -->
-  <script type="text/babel">
+    <head>
+        {{> head}}
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        {{> header-bar }}
+        <div id="root" class="container"></div>
+    </body>
+    <!-- 💡 permet de faire comprendre a Babel qu'il doit compiler ce fichier -->
+    <script type="text/babel">
     // 🦁 Remplace tout ceci par du JSX !
     // 💡 <button id=...
-    const startButton = React.createElement(
-      'button',
-      {
-        id: 'start',
+
+    const handleClick = () => {
+      console.log('Le bouton a été cliqué !');
+    }
+    
+    const helloBtn = (
+      <button
+      className='btn btn-primary'
+      onClick={handleClick}
+      id="start">Hello 👋 !</button>
+      )
+      
+      /*
         onClick: () => {
-          alert('Le bouton start à été cliqué !');
+          console.log('Le bouton start à été cliqué !');
         },
-      },
-      'Start'
-    );
+    */
 
-    // 🦁 Remplace tout ceci par du JSX !
-    // 💡 <div>...
-    const elements = React.createElement('div', null, startButton);
-
+    const Component = () => <p>Hello</p>
+    
+    const Card = () =>{
+    return (
+      <div className="card w-96 shadow-xl bg-gray-700 my-3">
+        <figure>
+          <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">Shoes!</h2>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div className="card-actions justify-end">
+            <button className="btn btn-primary">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    )}
+    
+    const elements = (
+      <div>
+        {helloBtn}
+        <Component />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+    )
+    /*
+    React.createElement('div', null, startButton);
+    */
     const root = ReactDOM.createRoot(document.querySelector('#root'));
     root.render(elements);
-  </script>
+    </script>
 </html>
