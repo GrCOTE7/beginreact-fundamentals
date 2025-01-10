@@ -10,59 +10,53 @@
         {{> header-bar }}
         <div id="root" class="container"></div>
     </body>
-    <!-- 💡 permet de faire comprendre a Babel qu'il doit compiler ce fichier -->
+    
     <script type="text/babel">
-    // 🦁 Remplace tout ceci par du JSX !
-    // 💡 <button id=...
-
-    const handleClick = () => {
-      console.log('Le bouton a été cliqué !');
-    }
-    
-    const helloBtn = (
-      <button
-      className='btn btn-primary'
-      onClick={handleClick}
-      id="start">Hello 👋 !</button>
-      )
       
-      /*
-        onClick: () => {
-          console.log('Le bouton start à été cliqué !');
-        },
-    */
+    const Card = (props) => {
+      console.log(props)
+      const borderColor = props.borderColor ? `border-${props.borderColor}`:`border-white`
+      console.log({borderColor})
+      const imgSize = props.imgSize ==='full' ? 'image-full' : '';
+      const cardClass = `card w-100 ${imgSize} shadow-xl bg-gray-700 my-3 ${borderColor} border-2`;
 
-    const Component = () => <p>Hello</p>
-    
-    const Card = () =>{
-    return (
-      <div className="card w-96 shadow-xl bg-gray-700 my-3">
-        <figure>
-          <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+      return (
+        <div className={cardClass}>
+          <figure class='h-[100px]'>
+            <img
+              src={props.image ?? "https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"}
+              alt="Shoes"
+            />
+          </figure>
+          <div className="card-body">
+            <div>{props?.id?.toUpperCase()}</div>
+            <div>{props.children ??'oki'}</div>
+            <span>{props.children[1]?.props.id ?? 'If a dog chews shoes whose shoes does he choose?'}
+            </span>
           </div>
         </div>
-      </div>
-    )}
-    
-    const elements = (
+      );
+    };
+    // {# <!-- <Card/> --> #}
+    const main = (
       <div>
-        {helloBtn}
-        <Component />
-        <Card />
-        <Card />
-        <Card />
+
+        <Card borderColor='[#f00]' id='Baby Shark 1' image='https://t3.ftcdn.net/jpg/05/72/04/56/360_F_572045630_2nkDW7ZH6SYAYGZm2qgUTNWZrREWaePA.jpg' imgSize='full'>
+          <p>Card 1.1</p>
+          <p id='Prop1Of#1'>Card 1.2</p>
+        </Card>
+
+        <Card id='Baby Shark 2' image='https://thumbs.dreamstime.com/b/cheerful-baby-shark-swims-vibrant-ocean-filled-light-color-330027221.jpg'>
+          <p>Card 2</p>
+        </Card>
+
+        <Card borderColor='[#00f]'>
+          <p>No Shark image</p>
+        </Card>
+        
       </div>
-    )
-    /*
-    React.createElement('div', null, startButton);
-    */
-    const root = ReactDOM.createRoot(document.querySelector('#root'));
-    root.render(elements);
+    );
+
+    ReactDOM.createRoot(document.querySelector('#root')).render(main);
     </script>
 </html>
