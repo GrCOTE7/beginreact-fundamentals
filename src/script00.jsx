@@ -3,15 +3,16 @@
 const Button = (props) => {
   console.log('Component button')
   const greting = props.id ? props.id : 'Salut'
+  const className = `btn btn-${props.className ? props.className : 'primary' } m-3`
   return (
-    <button class='btn btn-primary m-3'>{greting} 👋!</button>
+    <button class={className}>{greting} 👋!</button>
   )
 }
 
 const main = (
     <div>
       <Button id='Hello'/>
-      <Button />
+      <Button className='outline'/>
     </div>
   )
 
