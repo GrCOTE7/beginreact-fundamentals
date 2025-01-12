@@ -13,6 +13,8 @@ Mon cours JS:
 //2do DOC: https://react.
 // Autre resource JS: https://fr.javascript.info/
 
+Ressources: 
+- https://babeljs.io
 ---
 
 Pour appréhender correctement React, je vais te faire découvrir les fondamentaux de React.
