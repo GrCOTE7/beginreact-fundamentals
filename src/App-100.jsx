@@ -5,15 +5,15 @@ import React from 'react';
 // https://www.babeljs.io
 
 const SimpleText = () => {
-  return (
-    <div className="border-2 rounded-lg border-orange-400 p-2 py-1">
+  const jsx = <div className="border-2 rounded-lg border-orange-400 p-2 py-1">
     <h1 className="text-xl font-bold text-cyan-400">Component</h1>
     <p className="text-justify">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi beatae
     earum at quibusdam eius obcaecati molestiae exercitationem explicabo.
     </p>
-    </div>
-  );
+    </div>;
+  console.log({ jsx });
+  return jsx;
 };
 
 export default function App() {
