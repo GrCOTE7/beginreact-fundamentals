@@ -16,3 +16,9 @@
 #app {
   font-family: 'Comic Sans MS', sans-serif;
 }
+
+.lucide-rabbit {
+  display: inline-block;
+  margin-right: 10px;
+  color: rgb(0, 255, 0);
+}
