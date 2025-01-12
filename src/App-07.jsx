@@ -2,7 +2,7 @@ import React from 'react';
 
   const NameForm = () => {
     
-    const [name, setName] = React.useState('');
+    const [name, setName] = React.useState('Lio');
     
     // →Side Effect
     React.useEffect(
