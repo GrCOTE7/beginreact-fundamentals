@@ -2,26 +2,28 @@ import React from 'react';
 
   const NameForm = () => {
     
-    const [name, setName] = React.useState('Lio');
-    const uuu= 21
+    const [name, setName] = React.useState('');
+    
+    document.title = `Hi, ${(name || name.length >0) ? name: "?"}`;
     
     // →Side Effect
-    React.useEffect(
-      () => {
-        // 1. Run Effect
-        console.log('useEffect Calling');
-        console.log(name, uuu);
-        document.title = name;
+    // React.useEffect(
+    //   () => {
+    //     // 1. Run Effect
+    //     console.log('useEffect Calling');
+    //     console.log(name);
+    //     document.title = `Hi, ${name}`;
 
-        // return () => {
-        //   // 2. Clean Up Effect
-        // };
-      },
-      [
-        // 3. Dependencies
-        uuu // effect only re-render when uuu changes → Here: never !
-      ]
-    );
+    //     return () => {
+    //       // 2. Clean Up Effect
+    //       console.log('Before effect', name);
+    //     };
+    //   },
+    //   [
+    //     // 3. Dependencies
+    //     name
+    //   ]
+    // );
 
     return (
       <div className="flex flex-col items-center justify-center">
