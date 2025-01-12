@@ -4,26 +4,24 @@ import React from 'react';
     
     const [name, setName] = React.useState('');
     
-    document.title = `Hi, ${(name || name.length >0) ? name: "?"}`;
-    
     // →Side Effect
-    // React.useEffect(
-    //   () => {
-    //     // 1. Run Effect
-    //     console.log('useEffect Calling');
-    //     console.log(name);
-    //     document.title = `Hi, ${name}`;
+    React.useEffect(
+      () => {
+        // 1. Run Effect
+        console.log('useEffect Calling');
+        console.log(name);
+        document.title = `Hi, ${name ? name : '?'}`;
 
-    //     return () => {
-    //       // 2. Clean Up Effect
-    //       console.log('Before effect', name);
-    //     };
-    //   },
-    //   [
-    //     // 3. Dependencies
-    //     name
-    //   ]
-    // );
+        return () => {
+          // 2. Clean Up Effect
+          console.log('Before effect', name);
+        };
+      },
+      [
+        // 3. Dependencies
+        name
+      ]
+    );
 
     return (
       <div className="flex flex-col items-center justify-center">
