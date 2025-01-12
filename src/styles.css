@@ -12,3 +12,7 @@
   border-radius: 70%;
   object-fit: cover;
 }
+
+#app {
+  font-family: 'Comic Sans MS', sans-serif;
+}

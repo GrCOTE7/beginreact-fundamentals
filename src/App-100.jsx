@@ -2,14 +2,23 @@ import React from 'react';
 
 // Réf.ce: https://www.youtube.com/watch?v=eKYkDqHohrw&ab_channel=Melvynx%E2%80%A2Apprendre%C3%A0coder
 
-document.title = 'App-100';
+// https://www.babeljs.io
+
+const SimpleText = () => {
+  return (
+    <div className="border-2 rounded-lg border-orange-400 p-2 py-1">
+    <h1 className="text-xl font-bold text-cyan-400">Component</h1>
+    <p className="text-justify">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi beatae
+    earum at quibusdam eius obcaecati molestiae exercitationem explicabo.
+    </p>
+    </div>
+  );
+};
 
 export default function App() {
   console.log('Start');
   return (
-    <div>
-      <h1 className="text-2xl font-bold text-cyan-500 underline">Component</h1>
-      <p>Hello World</p>
-    </div>
+    <SimpleText />
   );
 }
