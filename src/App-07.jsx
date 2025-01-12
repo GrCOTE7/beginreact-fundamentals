@@ -9,7 +9,7 @@ import React from 'react';
       () => {
         // 1. Run Effect
         console.log('useEffect Calling');
-        console.log(name);
+        console.log(`Hi, ${name ? name : '?'}`);
         document.title = `Hi, ${name ? name : '?'}`;
 
         return () => {

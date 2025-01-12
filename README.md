@@ -10,6 +10,8 @@ Mon cours JS:
 
 //2do Lire: https://codelynx.dev/posts/comment-utiliser-useref
 
+//2do: https://www.youtube.com/playlist?list=PLWSRJPUQBThI9vEJ4s5MQUtdde5ldouB4
+
 //2do DOC: https://react.
 // Autre resource JS: https://fr.javascript.info/
 
