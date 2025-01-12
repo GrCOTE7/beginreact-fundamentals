@@ -12,7 +12,9 @@ const Counter = () => {
   };
 
   // Render
-  return <button onClick={() => increment()}>Count: {count}</button>;
+  let color = count % 2 === 0 ? 'green' : 'red';
+  
+  return <button onClick={() => increment()}>Count: <span className={`text-${color}-500 ml-3`}>{count}</span></button>;
 };
 
 export default function App() {

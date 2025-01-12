@@ -8,7 +8,8 @@ export default function App() {
   console.log('Start');
   return (
     <div>
-      <h1 className="text-5xl font-bold text-cyan-500 underline">Component</h1>
+      <h1 className="text-2xl font-bold text-cyan-500 underline">Component</h1>
+      <p>Hello World</p>
     </div>
   );
 }
