@@ -3,22 +3,24 @@ import React from 'react';
   const NameForm = () => {
     
     const [name, setName] = React.useState('Lio');
+    const uuu= 21
     
     // →Side Effect
     React.useEffect(
       () => {
         // 1. Run Effect
         console.log('useEffect Calling');
-        console.log(name);
+        console.log(name, uuu);
         document.title = name;
 
         // return () => {
         //   // 2. Clean Up Effect
         // };
       },
-      // [
-      //   // 3. Dependencies
-      // ]
+      [
+        // 3. Dependencies
+        uuu // effect only re-render when uuu changes → Here: never !
+      ]
     );
 
     return (
