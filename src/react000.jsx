@@ -19,7 +19,9 @@ import { createRoot } from 'react-dom/client';
 // import App from './App-108-events-todo';
 // import App from './App-109';
 // import App from './App-110';
-import App from './App-111';
+// import App from './App-111-useState-todos';
+// import App from './App-112-useEffect';
+import App from './App-113-useEffect-CleanUp';
 
 //2do : StrictMode obligé en prod (Mais double aff en CLI) !
 // <React.StrictMode>

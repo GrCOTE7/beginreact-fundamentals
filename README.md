@@ -14,6 +14,13 @@ Mon cours JS:
 
 //2do: https://www.youtube.com/playlist?list=PLWSRJPUQBThI9vEJ4s5MQUtdde5ldouB4
 
+// 2do https://mlv.sh/react-1
+// 2do https://mlv.sh/react-2
+// 2do https://mlv.sh/react-3
+// 2do https://mlv.sh/react-4
+// 2do https://mlv.sh/react-5
+
+
 //2do DOC: https://react.
 // Autre resource JS: https://fr.javascript.info/
 

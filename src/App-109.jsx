@@ -12,11 +12,9 @@ export default function App() {
   // Une fonction pour n'appeler l'initialState() qu'au 1er render
   console.log(count);
 
-/*************  ✨ Codeium Command ⭐  *************/
   /**
    * Increment the count state by 1 when the button is clicked.
    */
-/******  c2ffed50-f11f-4892-aaf0-ca881438ce45  *******/
   const handleClick = () => {
     // console.log('Clicked !');
     setCount(count + 1);
