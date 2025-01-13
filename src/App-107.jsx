@@ -43,7 +43,7 @@ export default function App() {
   return (
     <div className="flex flex-wrap justify-evenly gap-3 w-full">
       {FRIENDS.map((friend) => (
-        <FriendCard {...friend} />
+        <FriendCard key={friend.id} {...friend} />
       ))}
     </div>
   );
