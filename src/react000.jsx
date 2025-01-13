@@ -14,7 +14,8 @@ import { createRoot } from 'react-dom/client';
 // import App from './App-103';
 // import App from './App-104';
 // import App from './App-105'; // Simple list destructured
-import App from './App-106'; // 
+// import App from './App-106';
+import App from './App-107'; // 
 
 //2do : StrictMode obligé en prod (Mais double aff en CLI) !
 // <React.StrictMode>
