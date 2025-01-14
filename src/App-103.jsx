@@ -1,8 +1,6 @@
 import React from 'react';
 import { Rabbit } from 'lucide-react';
 
-const ShoeCard = (props) => {};
-
 export default function App() {
   return (
     <div className="flex flex-wrap justify-evenly gap-3 w-full">

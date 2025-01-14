@@ -8,8 +8,8 @@ export default function App() {
   console.log(count);
 
   const handleClick = () => {
-    setCount((current)=> current + 1);
-    setCount((current)=> current + 1);
+    setCount((curr)=> curr + 1);
+    setCount((curr)=> curr + 1);
   };
 
   return (

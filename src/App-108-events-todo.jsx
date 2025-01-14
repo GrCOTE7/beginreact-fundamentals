@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function App() {
   const handleClick = () => {
-    console.log('click');
+    console.log('Clicked !');
   };
   return (
     <div>

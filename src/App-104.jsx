@@ -28,12 +28,17 @@ export default function App() {
   console.log('go !');
   return (
     <div className="flex flex-wrap justify-evenly gap-3 w-full">
+      <div>
+        
       {FRIENDS.map((friend) => (
-        <p>{friend.name} </p>
+        <p key={friend.id}>{friend.name} </p>
       ))}
-      {/* {FRIENDS.map((friend) => (
-        <p>{...friend.id}</p>
-      ))} */}
+      </div>
+      <div>
+      {FRIENDS.map((friend) => (
+        <p key={friend.id}>{...friend.id}</p>
+      ))}
+      </div>
     </div>
   );
 }
