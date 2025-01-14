@@ -2,6 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 
 // import App from './App-01'; // Simple App
+
 // import App from './App-02-useState';
 // import App from './App-03-counterState';
 // import App from './App-04-counter-lifeCycle';
@@ -27,15 +28,15 @@ import { createRoot } from 'react-dom/client';
 // import App from './App-115-useEffect-MousePosition';
 // import App from './App-116-useEffect-click';
 // import App from './App-117-fetch-with-swr';
-import App from './App-118-cache-with-swr';
+// import App from './App-118-cache-with-swr';
+
+import App from './App-120-useContext';
 
 //2do : StrictMode obligé en prod (Mais double aff en CLI) !
   const main = <App />;
 
 const container = document.getElementById('app');
 const root = createRoot(container);
-root.render(
-<React.StrictMode>
-  {main}
-</React.StrictMode>
-);
+{/* <React.StrictMode> */}
+root.render(main);
+{/* </React.StrictMode> */}
