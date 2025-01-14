@@ -25,7 +25,9 @@ import { createRoot } from 'react-dom/client';
 // import App from './App-113-useEffect-CleanUp';
 // import App from './App-114-2-useEffects';
 // import App from './App-115-useEffect-MousePosition';
-import App from './App-116-useEffect-click';
+// import App from './App-116-useEffect-click';
+// import App from './App-117-fetch-with-swr';
+import App from './App-118-cache-with-swr';
 
 //2do : StrictMode obligé en prod (Mais double aff en CLI) !
   const main = <App />;
