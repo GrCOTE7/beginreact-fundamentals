@@ -30,7 +30,8 @@ import { createRoot } from 'react-dom/client';
 // import App from './App-117-fetch-with-swr';
 // import App from './App-118-cache-with-swr';
 
-import App from './App-120-useContext';
+// import App from './App-120-useContext';
+import App from './App-121-useContext-demo';
 
 //2do : StrictMode obligé en prod (Mais double aff en CLI) !
   const main = <App />;

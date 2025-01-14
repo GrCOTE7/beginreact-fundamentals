@@ -4,7 +4,7 @@ import { useState, createContext, use, useEffect } from 'react';
 const UserContext = createContext(null);
 
 export default function App() {
-  // State management = useState / iuseReduce
+  // State management = useState / useReducee
   // Context = Injecter des données ou de states
   return (
     <UserContext.Provider value={{ count: 111, name: 'Lionel' }}>
