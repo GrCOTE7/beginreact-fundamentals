@@ -1,4 +1,7 @@
-# Module 1 - Les fundamentals
+
+# [1a2](vscode://file/c:/laragon/www/1a2) > Module 1 - Les fundamentals 
+
+## 
 
 ## Mon cours JS
 
@@ -21,7 +24,6 @@
 // 2do https://mlv.sh/react-3
 // 2do https://mlv.sh/react-4
 // 2do https://mlv.sh/react-5
-
 
 //2do DOC: https://react.
 
