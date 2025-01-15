@@ -79,7 +79,6 @@ const DialogTrigger = ({ children }) => {
     return cloneElement(children, {
       onClick: (e) => {
         context.setOpen(true);
-        children.props.onClick(e);
       },
       style: {
         justifyContent: 'left',
