@@ -33,7 +33,8 @@ import { createRoot } from 'react-dom/client';
 // import App from './App-120-useContext';
 // import App from './App-121-useContext-demo';
 // import App from './App-122-useContext-modal';
-import App from './App-123-useContext-dialog';
+// import App from './App-123-useContext-dialog';
+import App from './App-124-useContext-dialog';
 
 //2do : StrictMode obligé en prod (Mais double aff en CLI) !
 const main = <App />;
