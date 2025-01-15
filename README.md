@@ -8,6 +8,8 @@ Mon cours JS:
 
 [Dépôt GH](https://github.com/Melvynx/beginjavascript-module2-base)
 
+//2do https://www.youtube.com/watch?v=eKYkDqHohrw&ab_channel=Melvynx%E2%80%A2Apprendre%C3%A0coder 2:46
+
 //2do Lire: https://codelynx.dev/posts/comment-utiliser-useref
 
 //2do https://www.youtube.com/playlist?list=PLWSRJPUQBThI9vEJ4s5MQUtdde5ldouB4
