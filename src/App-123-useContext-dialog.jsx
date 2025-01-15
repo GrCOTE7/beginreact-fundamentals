@@ -79,7 +79,7 @@ const DialogTrigger = ({ children }) => {
     return cloneElement(children, {
       onClick: (e) => {
         context.setOpen(true);
-        // children.props.onClick(e);
+        children.props.onClick(e);
       },
       style: {
         justifyContent: 'left',
@@ -88,9 +88,16 @@ const DialogTrigger = ({ children }) => {
       },
     });
   }
-
+  
+  // children.props.onClick(e);
   return (
-    <button className="btn btn-primary">{children} (Bouton par défaut)</button>
+    <button 
+    className="btn btn-primary"
+    onClick={()=>{
+      context.setOpen(true);
+    }}>
+      {children} (Bouton par défaut)
+      </button>
   );
 };
 
