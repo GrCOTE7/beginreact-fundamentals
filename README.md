@@ -1,6 +1,6 @@
 # Module 1 - Les fundamentals
 
-Mon cours JS:
+## Mon cours JS
 
 - Bases : https://codelynx.dev/posts/javascript-known-to-start-react
 
