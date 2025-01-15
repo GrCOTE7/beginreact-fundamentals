@@ -31,13 +31,18 @@ import { createRoot } from 'react-dom/client';
 // import App from './App-118-cache-with-swr';
 
 // import App from './App-120-useContext';
-import App from './App-121-useContext-demo';
+// import App from './App-121-useContext-demo';
+import App from './App-122-useContext-dialog';
 
 //2do : StrictMode obligé en prod (Mais double aff en CLI) !
-  const main = <App />;
+const main = <App />;
 
 const container = document.getElementById('app');
 const root = createRoot(container);
-{/* <React.StrictMode> */}
+{
+  /* <React.StrictMode> */
+}
 root.render(main);
-{/* </React.StrictMode> */}
+{
+  /* </React.StrictMode> */
+}

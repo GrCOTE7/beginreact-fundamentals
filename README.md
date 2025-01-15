@@ -22,6 +22,9 @@ Mon cours JS:
 
 
 //2do DOC: https://react.
+
+// 2do Autre resource sympa pour React (Web app) & React-native (Mobile App): https://www.youtube.com/@devaidaya
+
 // Autre resource JS: https://fr.javascript.info/
 
 Ressources: 
